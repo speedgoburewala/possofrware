@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>A4 Invoice</title>
+  <style>
+    @page { size: A4; margin: 12mm; }
+    body { font-family: Arial, sans-serif; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #ddd; padding: 8px; }
+    .right { text-align: right; }
+  </style>
+</head>
+<body>
+  <h1>{{restaurantName}}</h1>
+  <p>Invoice #{{orderNo}} | {{dateTime}}</p>
+  <table>
+    <thead><tr><th>Item</th><th>Qty</th><th class="right">Amount</th></tr></thead>
+    <tbody>{{itemsRows}}</tbody>
+  </table>
+  <h3 class="right">Grand Total: {{grandTotal}}</h3>
+</body>
+</html>

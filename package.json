@@ -1,0 +1,31 @@
+{
+  "name": "restaurant-pos-electron",
+  "version": "1.0.0",
+  "description": "Windows Restaurant POS desktop app using Electron + HTML/CSS/JS",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "build:win": "electron-builder --win nsis",
+    "pack": "electron-builder --dir"
+  },
+  "build": {
+    "appId": "com.possofrware.restaurantpos",
+    "productName": "PosSofrware Restaurant POS",
+    "directories": {
+      "buildResources": "build"
+    },
+    "files": [
+      "electron/**/*",
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "devDependencies": {
+    "electron": "^31.2.1",
+    "electron-builder": "^24.13.3"
+  }
+}
